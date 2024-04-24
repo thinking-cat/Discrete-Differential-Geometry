@@ -41,7 +41,7 @@ Hodge Star代表了k向量的正交补。
 
 ![orthogonal_complement](./images/Lecture3/orthogonal_complement.png)
 
-值得注意的是，正交补也就意味着，对于一个k向量，Hodge Star是一个 $(n-k)$ 向量，也就是说其同样具有**大小和方向**。此外 $(\alpha \wedge \star \alpha)>0$ 。
+值得注意的是，正交补也就意味着，对于一个k向量，Hodge Star是一个 $(n-k)$ 向量，也就是说其同样具有**大小和方向**。此外 $(\alpha \wedge \star \alpha)>0$ 。方向就遵循着“右手定则”的方向，而大小有行列式决定： $det(u,v,\star(u\wedge v))=1$
 
 ## k向量基（Basis k-Vectors）
 就像在向量空间中，我们总是寻求一组正交基底 ${e_1,\cdots,e_n}$ ，比如说三位空间中的我们总会选用 $\{x(1,0,0),y(0,1,0),z(0,0,1)\}$ 来作为对于空间坐标或者空间内向量的表示，对于空间**本身**的属性，也需要一些**基**来表示。如下图所示，在三维空间中的3种k向量基。
@@ -53,3 +53,16 @@ Hodge Star代表了k向量的正交补。
 在此处，Hodge Star有一个很重要的用处，也就是可以将**k向量基**映射为 $(n-k)$ 向量基：
 
 如果有一个k向量基 $\alpha:=e_{i_1}\wedge \cdots \wedge e_{i_k}$ ，那么一定有 $(\alpha \wedge \star \alpha)=1$ 
+
+## 升号 $\sharp$ 和降号 $\flat$
+如果说我们位于一个平面上，我们对于度量就没有那么关系，毕竟已经是平面了，可以使用向量来直接表示，因此想要将1-Form转变为向量，因此如果 $\alpha$ 为1-Form
+
+$$\alpha=\alpha_1dx^1+\cdots+\alpha_n dx^n$$
+
+就会“升号”（数学上的谐音梗，降号就是把系数从下标“升”为上标）为：
+
+$$\alpha^{\sharp}=\alpha^1\frac{\partial}{\partial x^1}+\cdots+\alpha^n\frac{\partial}{\partial x^n}$$
+
+降号则是恰好相反的思想，把向量转变为1-Form：
+
+$$v^{\flat}=v_1dx^1+\cdots+v_ndx^n$$
